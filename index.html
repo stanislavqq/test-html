@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1 class="text-center site-title">Hello</h1>
+
+<div class="form-wrapper">
+    <form action="#" class="dark-form">
+        <div class="form-info">
+            <p>
+                For business enquiries please <br>
+                use the form below
+            </p>
+
+            <div class="softened text-center">
+                <span class="star">*</span> Required
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label class="softened" for="field-name">Name <span class="star">*</span></label>
+            <input type="text" name="name" id="field-name" required>
+        </div>
+        <div class="form-field">
+            <label class="softened" for="field-company">Company <span class="star">*</span></label>
+            <input type="text" name="company" id="field-company" required>
+        </div>
+        <div class="form-field">
+            <label class="softened" for="field-e-mail">E-mail <span class="star">*</span></label>
+            <input type="text" name="e-mail" id="field-e-mail" required>
+        </div>
+        <div class="form-field">
+            <label class="softened" for="field-phone">Phone</label>
+            <input type="text" name="phone" id="field-phone">
+        </div>
+        <div class="form-field">
+            <label class="softened" for="field-subject">Subject</label>
+            <input type="text" name="subject" id="field-subject">
+        </div>
+        <div class="form-field">
+            <label class="softened" for="field-message">Message <span class="star">*</span></label>
+            <textarea name="message" id="field-message" cols="30" rows="2" required>But I must explain to you how all this mistaken idea of denouncing</textarea>
+        </div>
+
+        <div class="form-field">
+            <input class="hidden" type="checkbox" name="policy" id="field-policy" required>
+            <label for="field-policy" class="softened">
+                <div class="fake-checkbox"></div>
+                I accept <a href="#">Terms and Privacy Policy</a>
+            </label>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="button rounded dark-button">Send</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    var elements = document.querySelectorAll("input[type='text'], textarea");
+    for (var i in elements) {
+
+        elements[i].addEventListener('focus', function () {
+            this.parentNode.classList.add('focus');
+        });
+
+        elements[i].addEventListener('blur', function () {
+            this.parentNode.classList.remove('focus');
+        });
+    }
+</script>
+</body>
+</html>
